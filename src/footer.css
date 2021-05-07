@@ -1,0 +1,19 @@
+.loog img{
+    width:150px;
+}
+.loog{
+    display:flex;
+}
+footer ul li{ 
+list-style-type: none;
+}
+footer{
+color:#fff;
+height:300px;
+margin-top:30px;
+}
+@media screen and (max-width:400px){
+    .loog{
+        display: block;
+    }
+}
