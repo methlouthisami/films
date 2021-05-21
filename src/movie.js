@@ -1,23 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./movie.css";
-import { Card, Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
-function Movie({ input }) {
-  const [movie, setmovie] = useState([]);
+function Movie({ input, getFavoris, movie}) {
 
-  const getMovie = () => {
-    fetch("movie.json")
-      .then((response) => response.json())
-      .then((movies) => setmovie(movies));
-  };
 
-  useEffect(() => {
-    getMovie();
-  }, []);
 
-  console.log("%c render() du se composent ", "color:green;");
 
-  return movie
+
+  return movie 
     .filter((ro) => {
       if (input === "") {
         return ro;
@@ -26,21 +17,27 @@ function Movie({ input }) {
       }
     })
     .map((el) => (
-      <div className="cward">
-        <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={el.image} />
-          <Card.Body>
-            <Card.Title>{el.title}</Card.Title>
-            <Card.Text>
-              <div className="mr-auto">
-                {el.rating}
-                <img src="/favoris.png" className="favoris" />
-              </div>
-              <h6>{el.genre}/</h6>
-            </Card.Text>
-          </Card.Body>
-        </Card>
+
+
+      <div>
+        <div className="cward  m-3">
+          <Card style={{ width: "15rem" }}>
+            <Card.Img variant="top" src={el.image} />
+            <Card.Body>
+              <Card.Title>{el.title}</Card.Title>
+              <Card.Text>
+                <div className="mr-auto">
+                  {el.rating}
+                  <img src="/favoris.png" className="favoris" />
+                </div>
+                <h6>{el.genre}/</h6>
+              </Card.Text>
+              <button onClick={() => { getFavoris(el) }}className="fav_button">favourite</button>
+            </Card.Body>
+          </Card>
+        </div>
       </div>
+
     ));
 }
 

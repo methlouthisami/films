@@ -2,10 +2,24 @@ body{
   overflow-x: hidden;
   overflow-y: scroll;
 }
-Navbar{
-  background-color: red !important;
+.bag img{
+  width:1500px;
+  height:700px;
+  margin-top:0px;
 }
-
+.box {
+  position :relative;
+  top:-400px;
+  font-weight: bolder;
+  font-family: fantasy;
+  color:rgb(0, 0, 0);
+  background:rgba(255, 255, 255, .2);
+  box-shadow: 0 5px 15px rgba(0,0, 0, .5);
+  max-width:600px;
+  height:200px;
+  margin-right:650px;
+ 
+}
 .App {
 background-image: url(./tmn_bg.jpg);
 background-attachment: fixed;
@@ -20,7 +34,42 @@ background-repeat: no-repeat;
   height: 40vmin;
   pointer-events: none;
 }
-
+.button_one{
+  width:150px;
+  height:50px;
+  background-color:rgb(248, 38, 38);
+  border:transparent;
+  border-radius:50px;
+}
+.button_tow{
+   width:150px;
+  height:50px;
+  background-color:rgb(3, 3, 3);
+  border:transparent;
+  border-radius:50px;
+  color:rgb(248, 38, 38);
+}
+.chousing{
+  position: relative;
+  top:-250px;
+  box-shadow:0 5px 15px rgba(0,0, 0, .5);
+    background:rgba(255, 255, 255, .2);
+}
+input{
+  
+    background-color: transparent;
+    border:2px solid #c90f0f;
+    border-radius:50px;
+    color:#ffff;
+    font-family: inherit;
+    font-size: 1.2rem;
+}
+input::placeholder{
+    color:#ffff;
+}
+ input:focus{
+    border-radius: black;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

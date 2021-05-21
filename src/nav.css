@@ -2,14 +2,14 @@
 width:100px;
 height:80px;
 opacity:50px;
-margin-top: -20px;
+margin-top:-5px;
 }
 
 .naav{
-  
-    background-color:#000;
+      
+    background-color:#0000;
     height:100px;
-    padding-top: 20px;
+  
 }
 nav ul{
     display: flex;

@@ -2,12 +2,17 @@
     width:150px;
 }
 .loog{
-    display:flex;
+  display:flex;
 }
 footer ul li{ 
+    margin-top: 20px;
 list-style-type: none;
 }
 footer{
+background-color: black;
+width:1500px;
+margin-left: 0px;
+margin-right: 0px;
 color:#fff;
 height:300px;
 margin-top:30px;
